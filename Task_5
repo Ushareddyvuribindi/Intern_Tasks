@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        h2 {
+            text-align: center;
+            color: blue;
+        }
+
+        td.label {
+            font-weight: bold;
+            width: 40%; /* Set a fixed width for the label cells */
+        }
+
+        td.input {
+            width: 60%; /* Set a fixed width for the input cells */
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form>
+        <table>
+            <tr>
+                <td class="label">First Name</td>
+                <td class="input"><input type="text" name="first_name"></td>
+            </tr>
+            <tr>
+                <td class="label">Last Name</td>
+                <td class="input"><input type="text" name="last_name"></td>
+            </tr>
+            <tr>
+                <td class="label">Password</td>
+                <td class="input"><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td class="label">Re-enter Password</td>
+                <td class="input"><input type="password" name="confirm_password"></td>
+            </tr>
+            <tr>
+                <td class="label">Gender</td>
+                <td class="input">
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Address</td>
+                <td class="input"><textarea name="address"></textarea></td>
+            </tr>
+            <tr>
+                <td class="label">Phone Number</td>
+                <td class="input"><input type="text" name="phone_number"></td>
+            </tr>
+            <tr>
+                <td class="label">Country</td>
+                <td class="input">
+                    <select name="country">
+                        <option value="Choose">Choose your country</option>
+                        <option value="Country1">Country 1</option>
+                        <option value="Country2">Country 2</option>
+                        <!-- Add more country options as needed -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Languages known</td>
+                <td class="input">
+                    <input type="checkbox" name="languages" value="English"> English
+                    <input type="checkbox" name="languages" value="Kannada"> Kannada
+                    <input type="checkbox" name="languages" value="Hindi"> Hindi
+                    <input type="checkbox" name="languages" value="Telugu"> Telugu
+                </td>
+            </tr>
+            <tr>
+                <td class="label">Declaration</td>
+                <td class="input">
+                    <input type="checkbox" name="declaration" value="true"> Hereby I declare all the given details are true
+                </td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

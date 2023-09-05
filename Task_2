@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+      div {
+        float: left;
+      }
+      .container {
+        display: flex;
+        width: 100%;
+        height:295px;
+      }
+       #wrapper1 {
+        flex: 0 0 12%;
+      }
+       #wrapper2 {
+        flex: 2;
+        border: 2px solid purple;
+        border-style: solid solid solid none;
+      }
+      #inner1 {
+        float: left;
+        border: 2px solid purple;
+      }
+       #inner2 {
+        float: left;
+        clear: left;
+        border: 2px solid purple;
+        border-style: none solid solid solid;
+      }
+      .frame21{
+        border:1px solid black;
+        margin:20px;
+        margin-top:40px;
+        background-color: orange;
+      }
+      .frame22{
+        border:1px solid black;
+        margin:20px;
+        margin-top:40px;
+        margin-left:5px;
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <div class="container">
+    <div id="wrapper1">
+      <div id="inner1">
+        <h3 style="margin-left:20px">Frame11</h3>
+        <iframe
+          src="about:blank"
+          frameborder="0"
+          scrolling="no"
+          width="40%"
+          height="0px"
+
+        >
+        </iframe>
+        <h2 style="margin-left:20px">
+            <a href="module1.html" target="frame21">Module1</a>
+        </h2>
+      </div>
+      <div id="inner2">
+        <h3 style="margin-left:20px;">Frame21</h3>
+        <iframe
+          src="about:blank"
+          frameborder="0"
+          scrolling="no"
+          width="40%"
+          height="0px"
+        >
+        </iframe>
+        <h2 style="margin-left:20px">
+            <a href="module2.html" target="frame22">Module2</a>
+        </h2>
+      </div>
+    </div>
+    <div id="wrapper2">
+        <h3 style="margin-left:20px;">Frame2</h3>
+      <div style="display: flex">
+        <div class="frame21">
+          <iframe
+            src="about:blank"
+            frameborder="0"
+            scrolling="no"
+            width="100%"
+            height="100%"
+            align="right"
+            name="frame21"
+          ></iframe>
+        </div>
+        <div class="frame22">
+          <iframe
+            src="about:blank"
+            frameborder="0"
+            scrolling="no"
+            width="100%"
+            height="100%"
+            align="right"
+            name="frame22"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>

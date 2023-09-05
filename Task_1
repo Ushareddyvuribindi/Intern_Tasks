@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Usha Vuribindi 21BCE7785</title>
+  <style>
+  body{
+     font-family: Times New Roman, sans-serif;
+      margin: 3;
+      padding: 15px;
+      background-color: cornsilk;
+      border: solid 3px;
+      gap:3px
+   }
+ 
+   </style>
+  <script>
+    function performOperations() {
+      // Read array size from the textbox
+      var arraySize = parseInt(document.getElementById("arraySize").value);
+      
+      // Create a string array with the specified size
+      var array = new Array(arraySize);
+      
+      // Reverse the array elements
+      array.reverse();
+      
+      // Read name and index from textboxes
+      var name = document.getElementById("name").value;
+      var index = parseInt(document.getElementById("index").value);
+      
+      // Insert the name at the specified index in the array
+      array.splice(index, 0, name);
+      
+      // Display the resulting array
+      document.getElementById("result").innerHTML = "Array: " + array.join(", ");
+    }
+  </script>
+</head>
+<body>
+  <h1 style="background-color:navy;color:white;">Array Operations</h1>
+  
+  <label for="arraySize">Array size:</label>
+  <input type="text" id="arraySize" name="arraySize">
+  <br> <br> 
+  <button onclick="performOperations()"style="background-color: navy;color:white;border: solid 3px black;">Submit</button>
+  
+  <br><br>
+  
+  <label for="name">Enter Name:</label>
+  <input type="text" id="name" name="name">
+  
+  <label for="index">Index:</label>
+  <input type="text" id="index" name="index">
+  <br> <br> 
+  <button onclick="performOperations()" style="background-color: navy;color:white;border: solid 3px black;">Insert</button>
+  
+  <br><br>
+  
+  <div id="result"></div>
+</body>
+</html>
